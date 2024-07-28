@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BudayaIndonesia</string>
+    <string name="title_bahasa">Bahasa</string>
+    <string name="title_makanan">Makanan</string>
+    <string name="title_lagu">Lagu</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+</resources>
