@@ -5,13 +5,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.budayaindonesia.data.remote.response.ResultItem
-import com.example.budayaindonesia.databinding.ItemDataBinding
+import com.example.budayaindonesia.data.remote.response.BahasaItem
+import com.example.budayaindonesia.databinding.ItemBahasaBinding
 
-class BahasaAdapter : ListAdapter<ResultItem, BahasaAdapter.BahasaViewHolder>(BahasaDiffCallback()) {
+class BahasaAdapter : ListAdapter<BahasaItem, BahasaAdapter.BahasaViewHolder>(BahasaDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BahasaViewHolder {
-        val binding = ItemDataBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemBahasaBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return BahasaViewHolder(binding)
     }
 
@@ -20,8 +20,8 @@ class BahasaAdapter : ListAdapter<ResultItem, BahasaAdapter.BahasaViewHolder>(Ba
         holder.bind(bahasa)
     }
 
-    inner class BahasaViewHolder(private val binding: ItemDataBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(bahasa: ResultItem) {
+    inner class BahasaViewHolder(private val binding: ItemBahasaBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(bahasa: BahasaItem) {
             with(binding) {
                 tvJudul.text = bahasa.namaBahasa
                 tvDaerah.text = bahasa.asalDaerah
@@ -31,12 +31,12 @@ class BahasaAdapter : ListAdapter<ResultItem, BahasaAdapter.BahasaViewHolder>(Ba
     }
 }
 
-class BahasaDiffCallback : DiffUtil.ItemCallback<ResultItem>() {
-    override fun areItemsTheSame(oldItem: ResultItem, newItem: ResultItem): Boolean {
+class BahasaDiffCallback : DiffUtil.ItemCallback<BahasaItem>() {
+    override fun areItemsTheSame(oldItem: BahasaItem, newItem: BahasaItem): Boolean {
         return oldItem.idBahasa == newItem.idBahasa
     }
 
-    override fun areContentsTheSame(oldItem: ResultItem, newItem: ResultItem): Boolean {
+    override fun areContentsTheSame(oldItem: BahasaItem, newItem: BahasaItem): Boolean {
         return oldItem == newItem
     }
 }

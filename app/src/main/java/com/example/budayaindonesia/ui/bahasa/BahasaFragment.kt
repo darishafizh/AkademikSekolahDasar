@@ -1,7 +1,6 @@
 package com.example.budayaindonesia.ui.bahasa
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -44,7 +43,6 @@ class BahasaFragment : Fragment() {
             layoutManager = LinearLayoutManager(context)
             adapter = bahasaAdapter
         }
-        Log.d("BahasaFragment", "RecyclerView adapter set up.")
     }
 
 
@@ -53,8 +51,8 @@ class BahasaFragment : Fragment() {
             showLoading(isLoading)
         }
 
-        viewModel.bahasa.observe(viewLifecycleOwner) { resultItems ->
-            resultItems?.let { dataList ->
+        viewModel.bahasa.observe(viewLifecycleOwner) { bahasaItem ->
+            bahasaItem?.let { dataList ->
                 bahasaAdapter.submitList(dataList.filterNotNull())
             } ?: run {
                 showToast("No data available")

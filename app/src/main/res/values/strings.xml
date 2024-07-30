@@ -8,4 +8,6 @@
     <string name="data_bahasa">Data Bahasa Daerah</string>
     <string name="data_makanan">Data Makanan Daerah</string>
     <string name="data_lagu">Data Lagu Daerah</string>
+    <string name="setting">Setting</string>
+    <string name="sub_judul_lagu">Klik card untuk melihat detail</string>
 </resources>

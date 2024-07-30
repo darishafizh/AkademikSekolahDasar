@@ -5,10 +5,10 @@ import com.google.gson.annotations.SerializedName
 data class BahasaResponse(
 
 	@field:SerializedName("result")
-	val result: List<ResultItem?>? = null
+	val result: List<BahasaItem?>? = null
 )
 
-data class ResultItem(
+data class BahasaItem(
 
 	@field:SerializedName("id_bahasa")
 	val idBahasa: String? = null,

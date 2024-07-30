@@ -40,5 +40,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_judul"
-        tools:listitem="@layout/item_data"/>
+        tools:listitem="@layout/item_bahasa"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

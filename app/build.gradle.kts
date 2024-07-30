@@ -53,8 +53,16 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+//    glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
+
+//    retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+//    ok http
     implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
+
+//    Splash
+    implementation("androidx.core:core-splashscreen:1.0.0")
 }
